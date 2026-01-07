@@ -1,0 +1,28 @@
+{
+  "name": "rabbitmq-with-js",
+  "version": "1.0.0",
+  "description": "RabbitMQ with Node.js, Docker Compose, and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "producer": "node producer/index.js",
+    "consumer": "node consumer/index.js",
+    "dev:producer": "nodemon producer/index.js",
+    "dev:consumer": "nodemon consumer/index.js"
+  },
+  "keywords": [
+    "rabbitmq",
+    "nodejs",
+    "mongodb",
+    "docker"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
