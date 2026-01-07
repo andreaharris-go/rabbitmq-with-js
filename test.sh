@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Test script for RabbitMQ with Node.js application
 

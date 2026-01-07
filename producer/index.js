@@ -49,12 +49,16 @@ app.post('/message', async (req, res) => {
       timestamp: new Date().toISOString()
     };
 
-    channel.publish(
+    const published = channel.publish(
       TOPIC_NAME,
       '',
       Buffer.from(JSON.stringify(messageData)),
       { persistent: true }
     );
+
+    if (!published) {
+      throw new Error('Failed to publish message to RabbitMQ');
+    }
 
     console.log('Message published:', messageData);
     
